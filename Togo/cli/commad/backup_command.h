@@ -10,7 +10,7 @@ class BackupCommand : public AbstractCommand
 {
 public:
 	BackupCommand(std::map<std::string, std::string> input_options_mapping)
-		: AbstractCommand(std::string("run"), std::vector<std::string>(), input_options_mapping) {};
+		: AbstractCommand(std::vector<std::string>(), input_options_mapping) {};
 
 	virtual void Execute();
 

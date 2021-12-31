@@ -10,7 +10,7 @@ namespace command {
 	{
 	public:
 		SettingCommand(std::map<std::string, std::string> input_options_mapping)
-			: AbstractCommand(std::string("set"), std::vector<std::string>{"--auto", "--time"}, input_options_mapping) {};
+			: AbstractCommand(std::vector<std::string>{"--auto", "--time"}, input_options_mapping) {};
 
 		virtual void Execute();
 

@@ -1,6 +1,7 @@
 #pragma once
 
 #include "abstract_command.h"
+#include <utility>
 
 namespace togo {
 namespace cli {
@@ -10,7 +11,7 @@ class AddCommand : public AbstractCommand
 {
 public:
 	AddCommand(std::map<std::string, std::string> input_options_mapping)
-		: AbstractCommand(std::string("add"), std::vector<std::string>{"--source", "--destinaiton"}, input_options_mapping) {};
+		: AbstractCommand(std::vector<std::string>{"--source", "--destinaiton"}, input_options_mapping) {};
 
 	virtual void Execute();
 
