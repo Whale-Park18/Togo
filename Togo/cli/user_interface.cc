@@ -1,6 +1,6 @@
 #include "user_interface.h"
 
-void togo::cli::UserInterface::Launch()
+void togo::cli::UserInterface::Execute()
 {
 	command::AbstractCommand* command_master = command::CommandFilt(input_command_, input_options_mapping_);
 	command_master->Execute();

@@ -16,7 +16,7 @@ public:
 		set_input_options_mapping(std::vector<std::string>(command_line.begin() + OPTION_START_POINTER, command_line.end()));
 	}
 
-	void Launch();
+	void Execute();
 
 private:
 	void set_input_options_mapping(std::vector<std::string> options);
