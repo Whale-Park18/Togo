@@ -15,7 +15,10 @@ public:
 	virtual void Execute();
 
 protected:
-	virtual int CheckOptions();
+	virtual bool CheckOptions();
+
+private:
+	backup::core::Mover mover_;
 };
 
 } // namespace command
