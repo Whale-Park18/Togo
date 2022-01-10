@@ -74,12 +74,6 @@
     <ClInclude Include="backup\core\configure_manager.h">
       <Filter>헤더 파일\backup\core</Filter>
     </ClInclude>
-    <ClInclude Include="mover.h">
-      <Filter>헤더 파일\backup\core</Filter>
-    </ClInclude>
-    <ClInclude Include="core.h">
-      <Filter>헤더 파일\backup</Filter>
-    </ClInclude>
     <ClInclude Include="backup\filesystem_watcher.h">
       <Filter>헤더 파일\backup</Filter>
     </ClInclude>
@@ -107,5 +101,16 @@
     <ClInclude Include="cli\user_interface.h">
       <Filter>헤더 파일\cli</Filter>
     </ClInclude>
+    <ClInclude Include="backup\core\mover.h">
+      <Filter>헤더 파일\backup\core</Filter>
+    </ClInclude>
+    <ClInclude Include="backup\core.h">
+      <Filter>헤더 파일\backup</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="confingure.json">
+      <Filter>리소스 파일</Filter>
+    </None>
   </ItemGroup>
 </Project>

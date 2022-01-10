@@ -120,7 +120,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
     </ClCompile>
     <Link>
@@ -159,7 +159,9 @@
     <ClCompile Include="Togo.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="backup\core.h" />
     <ClInclude Include="backup\core\configure_manager.h" />
+    <ClInclude Include="backup\core\mover.h" />
     <ClInclude Include="backup\filesystem_watcher.h" />
     <ClInclude Include="cli\commad\abstract_command.h" />
     <ClInclude Include="cli\commad\add_command.h" />
@@ -169,8 +171,9 @@
     <ClInclude Include="cli\commad\setting_commabd.h" />
     <ClInclude Include="cli\command.h" />
     <ClInclude Include="cli\user_interface.h" />
-    <ClInclude Include="core.h" />
-    <ClInclude Include="mover.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="confingure.json" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
