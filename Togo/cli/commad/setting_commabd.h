@@ -6,17 +6,20 @@ namespace togo {
 namespace cli {
 namespace command {
 
-	class SettingCommand : public AbstractCommand
-	{
-	public:
-		SettingCommand(std::map<std::string, std::string> input_options_mapping)
-			: AbstractCommand(std::vector<std::string>{"--auto", "--time"}, input_options_mapping) {};
+class SettingCommand : public AbstractCommand
+{
+public:
+	SettingCommand(std::map<std::string, std::string> input_options_mapping)
+		: AbstractCommand(std::vector<std::string>{"--auto", "--time"}, input_options_mapping) {};
 
-		virtual void Execute();
+	virtual void Execute();
 
-	protected:
-		virtual int CheckOptions();
-	};
+protected:
+	virtual bool CheckOptions();
+
+private:
+	backup::core::ConfingureManager configureManager_;
+};
 
 } // namespace command
 } // namespace cli

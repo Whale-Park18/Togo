@@ -15,7 +15,10 @@ public:
 	virtual void Execute();
 
 protected:
-	virtual int CheckOptions();
+	virtual bool CheckOptions();
+
+private:
+	backup::core::ConfingureManager configureManager_;
 };
 
 } // namespace command
