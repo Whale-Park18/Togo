@@ -1,7 +1,9 @@
 #pragma once
 
 #include "abstract_command.h"
-#include <utility>
+#include "../../backup/core.h"
+#include <boost/filesystem/path.hpp>
+#include <boost/filesystem/operations.hpp>
 
 namespace togo {
 namespace cli {
@@ -16,7 +18,13 @@ public:
 	virtual void Execute();
 
 protected:
-	virtual int CheckOptions();
+	virtual bool CheckOptions();
+	bool IsExist(boost::filesystem::path);
+
+private:
+	boost::filesystem::path source_;
+	boost::filesystem::path destination_;
+	backup::core::ConfingureManager configureManager_;
 };
 
 } // namespace command
