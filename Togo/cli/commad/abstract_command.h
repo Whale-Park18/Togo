@@ -4,6 +4,7 @@
 #include <vector>
 #include <map>
 #include <algorithm>
+#include "../../backup/core.h"
 
 namespace togo {
 namespace cli {
@@ -18,7 +19,7 @@ public:
 	virtual void Execute() = 0;
 
 protected:
-	virtual int CheckOptions() = 0;
+	virtual bool CheckOptions() = 0;
 	bool HaveOption(std::string option)
 	{
 		if (std::find(kOptions_.begin(), kOptions_.end(), option) == kOptions_.end())
@@ -28,7 +29,6 @@ protected:
 	}
 
 protected:
-
 	const std::vector<std::string> kOptions_;
 	std::map<std::string, std::string> input_options_mapping_;
 };
