@@ -37,6 +37,12 @@
     <Filter Include="소스 파일\backup\core">
       <UniqueIdentifier>{de941959-e68b-4df6-8a64-b323f7c7784e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\error">
+      <UniqueIdentifier>{bb0864b8-7279-448c-8f9d-f3d262e8a031}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="헤더 파일\error">
+      <UniqueIdentifier>{42754b52-f922-4568-89b7-f2b455f0e688}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Togo.cpp">
