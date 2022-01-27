@@ -4,7 +4,7 @@ void togo::cli::command::SettingCommand::Execute()
 {
 }
 
-int togo::cli::command::SettingCommand::CheckOptions()
+bool togo::cli::command::SettingCommand::IsOptionCorrect()
 {
     return 0;
 }

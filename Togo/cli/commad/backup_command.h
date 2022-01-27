@@ -15,7 +15,7 @@ public:
 	virtual void Execute();
 
 protected:
-	virtual bool CheckOptions();
+	virtual bool IsOptionCorrect();
 
 private:
 	backup::core::Mover mover_;

@@ -18,8 +18,8 @@ public:
 	virtual void Execute();
 
 protected:
-	virtual bool CheckOptions();
-	bool IsExist(boost::filesystem::path);
+	virtual bool IsOptionCorrect();
+	bool IsExist(boost::filesystem::path& path);
 
 private:
 	boost::filesystem::path source_;

@@ -5,7 +5,7 @@ void togo::cli::command::ListCommand::Execute()
 	configureManager_.PrintPathList();
 }
 
-int togo::cli::command::ListCommand::CheckOptions()
+bool togo::cli::command::ListCommand::IsOptionCorrect()
 {
 	if (input_options_mapping_.empty())
 		return true;

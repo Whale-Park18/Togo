@@ -19,7 +19,7 @@ public:
 	virtual void Execute() = 0;
 
 protected:
-	virtual bool CheckOptions() = 0;
+	virtual bool IsOptionCorrect() = 0;
 	bool HaveOption(std::string option)
 	{
 		if (std::find(kOptions_.begin(), kOptions_.end(), option) == kOptions_.end())

@@ -2,10 +2,10 @@
 
 void togo::cli::command::BackupCommand::Execute()
 {
-	mover.execute();
+	mover_.execute();
 }
 
-int togo::cli::command::BackupCommand::CheckOptions()
+bool togo::cli::command::BackupCommand::IsOptionCorrect()
 {
 	if (input_options_mapping_.empty())
 		return true;

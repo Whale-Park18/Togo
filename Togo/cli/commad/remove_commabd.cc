@@ -4,7 +4,7 @@ void togo::cli::command::RemoveCommand::Execute()
 {
 }
 
-int togo::cli::command::RemoveCommand::CheckOptions()
+bool togo::cli::command::RemoveCommand::IsOptionCorrect()
 {
 	return 0;
 }

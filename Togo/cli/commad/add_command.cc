@@ -2,17 +2,24 @@
 
 void togo::cli::command::AddCommand::Execute()
 {
-    configureManager_.AddPath(source_, destination_);
+    if (IsOptionCorrect())
+        configureManager_.AddPath(source_, destination_);
+
+    else
+        // 임시 에러 출력 코드
+        std::cerr << "error" << std::endl;
 }
 
-bool togo::cli::command::AddCommand::CheckOptions()
+bool togo::cli::command::AddCommand::IsOptionCorrect()
 {
-    for (auto pair : input_options_mapping_)
+    for (auto& pair : input_options_mapping_)
     {
         if (HaveOption(pair.first))
         {
-            if (IsExist(pair.second))
+            boost::filesystem::path path(pair.second);
+            if (IsExist(path))
                 continue;
+
             else
             {
                 // throw: [pair.second], path does not exist
@@ -29,7 +36,7 @@ bool togo::cli::command::AddCommand::CheckOptions()
     return true;
 }
 
-bool togo::cli::command::AddCommand::IsExist(boost::filesystem::path)
+bool togo::cli::command::AddCommand::IsExist(boost::filesystem::path& path)
 {
-    return false;
+    return boost::filesystem::exists(path);
 }
